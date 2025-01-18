@@ -1,11 +1,11 @@
 /* General Reset */
 body {
-    
     margin: 0;
     padding: 0;
     line-height: 1.6;
     color: #333;
 }
+
 body {
     font-family: 'Roboto', sans-serif; /* Default body font */
 }
@@ -127,4 +127,94 @@ img {
     flex-wrap: wrap;
     margin-top: 30px;
     padding: auto;
+}
+
+/* Mobile-specific Styles */
+@media screen and (max-width: 768px) {
+    /* Header: Stack logo and text vertically */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 100px; /* Reduce logo size */
+        height: 100px;
+        left: 0; /* Align logo to the left of the screen */
+        position: relative; /* Remove absolute positioning */
+        margin-bottom: 10px; /* Add some space between logo and text */
+    }
+
+    .header-text {
+        padding-left: 0; /* Remove padding left for small screens */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reduce heading size */
+    }
+
+    header p {
+        font-size: 1em; /* Adjust paragraph size */
+    }
+
+    /* Section adjustments */
+    section {
+        padding: 15px 10px;
+    }
+
+    section h2 {
+        font-size: 1.8em; /* Adjust section title size */
+    }
+
+    .about-image,
+    .vision-image {
+        width: 100%; /* Make images responsive */
+        margin-bottom: 20px;
+    }
+
+    /* Client Logos */
+    .client-logos {
+        flex-direction: column; /* Stack logos vertically */
+        align-items: center;
+    }
+
+    .client-logos img {
+        width: 120px; /* Reduce logo size for mobile */
+        margin: 10px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+/* Extra Small Mobile Styles (Below 480px) */
+@media screen and (max-width: 480px) {
+    /* Header adjustments for very small screens */
+    header h1 {
+        font-size: 1.5em; /* Reduce header font size even more */
+    }
+
+    header p {
+        font-size: 0.9em; /* Smaller text size */
+    }
+
+    /* Further reduce padding in sections */
+    section {
+        padding: 10px 5px;
+    }
+
+    section h2 {
+        font-size: 1.5em; /* Reduce section heading size */
+    }
+
+    .about-image,
+    .vision-image {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        font-size: 0.8em; /* Reduce footer text size */
+    }
 }
